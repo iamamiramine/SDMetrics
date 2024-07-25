@@ -121,7 +121,7 @@ def allow_nan(df):
     """
     df_copy = df.copy()
     for i in df_copy:
-        print(df_copy[i][0], flush=True)
+        print(df_copy.iloc[i][0], flush=True)
         for j in range(len(df_copy[i])):
             entry = df_copy[i][j]
             if (isinstance(entry, float) and np.isnan(entry)) or entry is None:
